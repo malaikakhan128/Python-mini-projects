@@ -8,10 +8,13 @@ A CLI POS with dynamic menu, customer invoices, file I/O, tax/discount calculati
 
 ## Other Projects in Progress
 Mall Inventory and Sales Tracker - System to track stock, record sales, and show remaining items vs sold items
-Calculator - OOP calculator with functions and error handling
+
 
 ## How to run
 To run the Restaurant Billing System:
 python professional_billing_v2.py
+
+To run the calculator.
+calculator_pro.py
 
 Built to strengthen Python fundamentals for AI research.
