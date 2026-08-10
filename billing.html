@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Billing System</title>
+    <style>
+        body { font-family: Arial; background: #fff8e1; padding: 30px; }
+        .container { background: white; max-width: 600px; margin: auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        h1 { text-align: center; color: #ff6f00; }
+        .item { display: flex; justify-content: space-between; margin: 10px 0; }
+        input { width: 60px; }
+        button { background: #ff6f00; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+        #total { font-size: 20px; font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧾 Restaurant Billing System</h1>
+        <div class="item"><span>Burger - Rs 300</span> <input type="number" id="burger" value="0" min="0"></div>
+        <div class="item"><span>Pizza - Rs 800</span> <input type="number" id="pizza" value="0" min="0"></div>
+        <div class="item"><span>Cold Drink - Rs 100</span> <input type="number" id="drink" value="0" min="0"></div>
+        <div class="item"><span>Fries - Rs 150</span> <input type="number" id="fries" value="0" min="0"></div>
+        <br>
+        <button onclick="calculateBill()">Calculate Bill</button>
+        <h2>Total: Rs <span id="total">0</span></h2>
+        <br>
+        <a href="index.html">← Back to Menu</a>
+    </div>
+
+    <script>
+        function calculateBill() {
+            let b = document.getElementById('burger').value * 300;
+            let p = document.getElementById('pizza').value * 800;
+            let d = document.getElementById('drink').value * 100;
+            let f = document.getElementById('fries').value * 150;
+            let total = b + p + d + f;
+            document.getElementById('total').innerText = total;
+        }
+    </script>
+</body>
+</html>
