@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Project</title>
+    <style>
+        body { font-family: Arial; background: #f0f0f0; text-align: center; padding: 50px; }
+        .calc { background: white; width: 300px; margin: auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        input { width: 90%; padding: 15px; font-size: 20px; margin-bottom: 10px; }
+        button { width: 60px; height: 60px; font-size: 18px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; }
+        .num { background: #e0e0e0; }
+        .op { background: #ff9500; color: white; }
+    </style>
+</head>
+<body>
+    <h1>🧮 Python Calculator Project</h1>
+    <div class="calc">
+        <input type="text" id="display" readonly>
+        <br>
+        <button class="num" onclick="add('7')">7</button>
+        <button class="num" onclick="add('8')">8</button>
+        <button class="num" onclick="add('9')">9</button>
+        <button class="op" onclick="add('+')">+</button>
+        <br>
+        <button class="num" onclick="add('4')">4</button>
+        <button class="num" onclick="add('5')">5</button>
+        <button class="num" onclick="add('6')">6</button>
+        <button class="op" onclick="add('-')">-</button>
+        <br>
+        <button class="num" onclick="add('1')">1</button>
+        <button class="num" onclick="add('2')">2</button>
+        <button class="num" onclick="add('3')">3</button>
+        <button class="op" onclick="add('*')">*</button>
+        <br>
+        <button class="num" onclick="add('0')">0</button>
+        <button class="op" onclick="clearDisplay()">C</button>
+        <button class="op" onclick="calculate()">=</button>
+        <button class="op" onclick="add('/')">/</button>
+    </div>
+    <br><br>
+    <a href="index.html">← Back to Menu</a>
+
+    <script>
+        function add(val) { document.getElementById('display').value += val; }
+        function clearDisplay() { document.getElementById('display').value = ''; }
+        function calculate() { 
+            try { document.getElementById('display').value = eval(document.getElementById('display').value); }
+            catch { alert('Invalid Expression'); }
+        }
+    </script>
+</body>
+</html>
